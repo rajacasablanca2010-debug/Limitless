@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>✨</text></svg>" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Limitless AI Image Analyzer - Gemini 2.0 Flash</title>
+    <meta name="description" content="A premium, Cloudflare-hosted wrapper for Google Gemini Flash, designed to bypass preview limitations and explore AI image generation limits." />
+    <!-- Preconnect to Google Fonts for performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <script type="module" crossorigin src="/assets/index-Cl1zYuVM.js"></script>
+    <link rel="stylesheet" crossorigin href="/assets/index-CAaBdvFU.css">
+  </head>
+  <body>
+    <!-- Background Animated Shapes -->
+    <div class="blob shape-1"></div>
+    <div class="blob shape-2"></div>
+    <div class="blob shape-3"></div>
+
+    <div class="container glass-panel">
+      <header>
+        <h1>Limitless Vision</h1>
+        <p class="subtitle">Powered by Gemini 2.0 Flash</p>
+      </header>
+
+      <main>
+        <div class="upload-section" id="drop-zone">
+          <input type="file" id="image-upload" accept="image/*" hidden />
+          <label for="image-upload" class="upload-label">
+             <div class="icon">📸</div>
+             <p>Drag & drop an image or <span class="highlight">browse</span></p>
+             <img id="image-preview" src="" alt="Preview" style="display: none;" />
+          </label>
+        </div>
+
+        <div class="input-section">
+          <textarea id="prompt-input" placeholder="What do you want to know about this image? e.g. 'Describe the lighting and atmosphere...'" rows="3"></textarea>
+          <button id="analyze-btn" disabled>
+            <span class="btn-text">Analyze Image</span>
+            <div class="loader" style="display: none;"></div>
+          </button>
+        </div>
+
+        <div class="result-section">
+          <div class="status-indicator" id="status-message"></div>
+          <div id="result-output" class="result-output placeholder">
+            The AI's insights will appear here ✨
+          </div>
+        </div>
+      </main>
+    </div>
+    
+  </body>
+</html>

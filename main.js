@@ -132,8 +132,8 @@ async function analyzeImage(retries = 3, delay = 2000) {
     showStatus('Analysis complete ✨', 'success');
 
   } catch (error) {
-    if (error.message.includes('Server missing GEMINI_API_KEY')) {
-       resultOutput.innerHTML = `<strong>Setup Required:</strong><br><br>The Cloudflare backend is missing the <code>GEMINI_API_KEY</code> environment variable.<br>Make sure to add it via the Cloudflare Dashboard under your Pages project settings > Settings > Environment Variables before deploying or testing.`;
+    if (error.message.includes('AI binding')) {
+       resultOutput.innerHTML = `<strong>Setup Required:</strong><br><br>The Cloudflare backend is missing the AI binding.<br>Make sure the <code>[ai]</code> configuration is correctly set in your wrangler.toml or Cloudflare Dashboard.`;
     } else {
        resultOutput.textContent = error.message;
     }
